@@ -1,0 +1,19 @@
+.jumbotron{
+	text-align: center;
+	font size: 25px;
+	font-family: Arial;
+	background-image: url("/assets/images/tx_outline.svg");
+    margin-bottom: 0;`enter code here`
+    min-height: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+
+}
+
+body  {
+    background-image: url("/assets/images/tx_outline.svg");
+
+}

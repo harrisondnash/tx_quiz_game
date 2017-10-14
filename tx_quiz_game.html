@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<head>
+	<title>Texas Quiz Game</title>
+	<meta charset="utf-8">
+
+	<!-- Linking Reset -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+	<!-- Linking Bootstrap -->
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<!-- Linking Style.css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+</head>
+
+<script>
+
+	function score()
+	{
+			var q1 = document.forms.form.q1.value;
+			var q2 = document.forms.form.q2.value;
+			var q3 = document.forms.form.q3.value;
+
+			var questions = [q1, q2, q3];
+
+			var answers = ["c", "d", "b"];
+
+			var points = 0;
+			var total = 3;
+
+			for (var i = 0; i < total; i++)
+			{
+					if (questions[i] === answers[i])
+					{
+						points = points + 1;
+					}
+
+
+			}
+
+			var q = document.getElementById("results");
+
+			q.style.fontSize = "40px";
+			q.style.textAlign = "center";
+			q.innerHTML = "You got " + points +" out of "  + total;
+
+			return false;
+
+	}
+
+</script>
+
+<div class="jumbotron">
+
+	<h1> Texas Quiz Game </h1>
+
+<body>
+
+		<form name="form" onsubmit="return score()">
+
+				<h3>1. What is the capital of Texas?</h3>
+				<input type="radio" name="q1" value="a">a. Killeen<br>
+				<input type="radio" name="q1" value="b">b. Ballinger<br>
+				<input type="radio" name="q1" value="c">c. Austin<br>
+				<input type="radio" name="q1" value="d">d. El Paso<br>
+
+				<h3>2. What is the currency in Texas?</h3>
+				<input type="radio" name="q2" value="a">a. Lone Star Beer<br>
+				<input type="radio" name="q2" value="b">b. Gold Ingots<br>
+				<input type="radio" name="q2" value="c">c. Horses<br>
+				<input type="radio" name="q2" value="d">d. Samsung Stocks<br>
+
+				<h3>3. What is a "Jackalope"? </h3>
+				<input type="radio" name="q3" value="a">a. A melon-type fruit<br>
+				<input type="radio" name="q3" value="b">b. A fictional animal<br>
+				<input type="radio" name="q3" value="c">c. A movie with Steve-O<br>
+				<input type="radio" name="q3" value="d">d. An actual animal<br>
+
+				<br>
+				<br>
+
+				<input type="submit" id="send" value="Submit">
+				<br>
+				<p id="results"></p>
+
+		</form>
+
+</body>
+
+</div>
+
+</html>
